@@ -64,6 +64,7 @@ name = "artcz"
 
 [[current]]
 name = "enedil"
+tags = [ "crypto", "re" ]
 
 [[current]]
 name = "gregxsunday"
