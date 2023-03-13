@@ -1,4 +1,4 @@
-# Sample member entry, for available tags look in tags.toml
+# Sample member entry, for available tags look in tags.toml (https://github.com/justcatthefish/justcatthefish.github.io/blob/main/data/tags.toml)
 # [[current]]
 # name = "nickname"
 # tags = [ "tag1", "tag2" ]
@@ -7,7 +7,13 @@
 
 [[current]]
 name = "disconnect3d"
-bio = "The team **captain**."
+tags = [ "pwn", "re" ]
+bio = "Likes to poke at things to understand how they work. Currently works at Trail of Bits looking for bugs in software. Also, [Pwndbg](https://github.com/pwndbg/pwndbg) maintainer and the team **captain**."
+link = "https://disconnect3d.pl/"
+# irc = disconnect3d @ libera
+# github = https://github.com/disconnect3d
+# twitter = https://twitter.com/disconnect3d_pl
+# mail = dominik.b.czarnota+ctf@gmail.com
 
 [[current]]
 name = "haqpl"
