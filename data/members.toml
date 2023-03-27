@@ -45,6 +45,8 @@ link = "https://szymex.pw/"
 
 [[current]]
 name = "Xert"
+tags = [ "misc", "ppc", "guessing" ]
+bio = "Doing random things and waiting for valid results"
 
 [[current]]
 name = "adamm"
