@@ -21,6 +21,9 @@ name = "DrBrix"
 
 [[current]]
 name = "embe221ed"
+tags = [ "pwn", "blockchain" ]
+bio = "WUBBA LUBBA DUB DUB!"
+link = "https://embe221ed.dev"
 
 [[current]]
 name = "MrQubo"
