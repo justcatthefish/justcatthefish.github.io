@@ -294,6 +294,12 @@ body {
 	display: inline;
 }
 
+/* Markdown pages */
+.markdown-content {
+	font-family: var(--long-text-font-family);
+	font-size: 1.5rem;
+}
+
 /* Responsive */
 
 @media only screen and (max-height: 799px) {
