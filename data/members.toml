@@ -47,6 +47,9 @@ name = "ptrtofuture"
 
 [[current]]
 name = "Rivit"
+tags = [ "pwn", "re", "guessing" ]
+bio = "Snacking with one hand, pwning with the other."
+link = "https://rivit.dev/"
 
 [[current]]
 name = "szymex73"
