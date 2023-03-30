@@ -97,6 +97,9 @@ bio = "Mostly after Python-based challenges"
 
 [[current]]
 name = "kolokokop"
+tags = ["web", "guessing"]
+bio = "![Psyduck](https://cdn.discordapp.com/emojis/1066726142792437830.webp?size=32&quality=lossless)"
+link = "https://twitter.com/kolokokop"
 
 [[current]]
 name = "Kusik"
