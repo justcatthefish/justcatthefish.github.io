@@ -129,16 +129,16 @@ link = "https://github.com/nikoshell/"
 gravatar = "3aecd7dd480bf54dd324d4ac2b3f4b094f12138b7fb38cf6118f2eadeb93d661"
 
 [[current]]
-name = "foxtrot_charlie"
-tags = [ "misc", "fore", "re" ]
-bio = "Juggling with bits and bytes"
-link = "https://foxtrotlabs.cc"
-
-[[current]]
 name = "tomek7667"
 tags = [ "web", "misc" ]
 link = "https://cyber-man.pl/about"
 bio = "a = NaN; a==a"
+
+[[current]]
+name = "foxtrot_charlie"
+tags = [ "misc", "fore", "re" ]
+bio = "Juggling with bits and bytes"
+link = "https://foxtrotlabs.cc"
 
 # Former
 [[former]]
