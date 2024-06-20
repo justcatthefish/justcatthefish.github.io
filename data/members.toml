@@ -134,6 +134,12 @@ tags = [ "misc", "fore", "re" ]
 bio = "Juggling with bits and bytes"
 link = "https://foxtrotlabs.cc"
 
+[[current]]
+name = "tomek7667"
+tags = [ "web", "misc" ]
+link = "https://cyber-man.pl/about"
+bio = "a = NaN; a==a"
+
 # Former
 [[former]]
 name = "ahpaleus"
