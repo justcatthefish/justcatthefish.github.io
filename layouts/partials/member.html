@@ -1,0 +1,16 @@
+    <li>
+      {{- if .link }}
+        <a href="{{ .link }}">
+          {{- partial "member-image" . }}
+        </a>
+      {{- else }}
+        {{- partial "member-image" . }}
+      {{ end -}}
+      <h4 class="member-name">
+          {{- if .link }}<a href="{{ .link }}"><u>{{ .name }}</u></a>{{ else }}{{ .name }}{{ end -}}
+      </h4>
+      <div class="member-tags">
+          {{- range .tags }}<span class="tag tag-{{ . }}">{{ . }}</span>{{ end -}}
+      </div>
+      <p class="member-desc">{{ .bio | markdownify }}</p>
+    </li>

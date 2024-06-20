@@ -8,33 +8,7 @@
 
 <ul class="member-list">
     {{ range .Site.Data.members.current }}
-    <li>
-      {{- if .gravatar }}
-        <a href="{{ .link }}">
-          {{ $avatar := printf "https://gravatar.com/avatar/%s.jpg?s=142" .gravatar }}
-          {{ $image := resources.GetRemote $avatar}}
-          <img class="avatar" src="{{ $image.RelPermalink }}" />
-        </a>
-      {{ else }}
-        {{ $avatar := printf "avatars/%s.png" .name  }}
-        {{ $image := resources.Get $avatar }}
-        {{- if $image }}
-          {{ $image := $image.Process "fit 200x200" }}
-            <a href="{{ .link }}">
-              <img class="avatar" src="{{ $image.RelPermalink }}" />
-            </a>
-        {{ else }}
-          <img class="blank-avatar" src="/blank_avatar.png" alt="No avatar image" />
-        {{end -}}
-      {{end -}}
-      <h4 class="member-name">
-          {{- if .link }}<a href="{{ .link }}"><u>{{ .name }}</u></a>{{ else }}{{ .name }}{{ end -}}
-      </h4>
-      <div class="member-tags">
-          {{- range .tags }}<span class="tag tag-{{ . }}">{{ . }}</span>{{ end -}}
-      </div>
-      <p class="member-desc">{{ .bio | markdownify }}</p>
-    </li>
+      {{ partial "member" . }}
     {{ end }}
 </ul>
 
@@ -42,17 +16,7 @@
     <summary class="former-details-header member-former-header">Former</summary>
     <ul class="member-list">
         {{ range .Site.Data.members.former }}
-        <li>
-            <h4 class="member-name">
-                {{- if .link }}<a href="{{ .link }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end -}}
-            </h4>
-            {{/*
-            <div class="member-tags">
-                {{- range .tags }}<span class="tag tag-{{ . }}">{{ . }}</span>{{ end -}}
-            </div>
-            <p class="member-desc">{{ .bio | markdownify }}</p>
-            */}}
-        </li>
+          {{ partial "member" . }}
         {{ end }}
     </ul>
 </details>

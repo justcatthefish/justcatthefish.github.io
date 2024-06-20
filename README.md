@@ -1,5 +1,11 @@
 # website
 ## Local test
+
+### With docker
+`docker compose up`
+
+### Without docker
+
 Install [hugo](https://gohugo.io/), then start the server
 ```bash
 hugo server

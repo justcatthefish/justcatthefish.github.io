@@ -1,0 +1,10 @@
+services:
+  overlays:
+    image: hugomods/hugo:latest
+    volumes:
+      - "./:/src/"
+    command: [
+      "hugo", "server", "--disableFastRender", "--bind", "0.0.0.0",
+    ]
+    ports:
+      - "1313:1313"

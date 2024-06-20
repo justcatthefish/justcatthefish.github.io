@@ -1,0 +1,14 @@
+      {{- if .gravatar }}
+          {{ $avatar := printf "https://gravatar.com/avatar/%s.jpg?s=142" .gravatar }}
+          {{ $image := resources.GetRemote $avatar}}
+          <img class="avatar" src="{{ $image.RelPermalink }}" />
+      {{ else }}
+        {{ $avatar := printf "avatars/%s.png" .name  }}
+        {{ $image := resources.Get $avatar }}
+        {{- if $image }}
+          {{ $image := $image.Process "fit 200x200" }}
+          <img class="avatar" src="{{ $image.RelPermalink }}" />
+        {{ else }}
+          <img class="blank-avatar" src="/blank_avatar.png" alt="No avatar image" />
+        {{end -}}
+      {{end -}}
