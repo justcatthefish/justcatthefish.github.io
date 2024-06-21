@@ -109,11 +109,6 @@ body {
 	vertical-align: baseline;
 }
 
-.social-links svg, .social-contact svg {
-	min-width: fit-content;
-	min-height: fit-content;
-}
-
 .social-contact {
 	margin-top: 64px;
 }
