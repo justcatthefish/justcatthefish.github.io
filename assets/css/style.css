@@ -29,6 +29,7 @@ html, body {
 }
 
 body {
+  min-width:250px;
 	width: 100vw;
 	overflow-x: hidden;
 }
@@ -501,7 +502,7 @@ body {
 }
 
 @media only screen and (max-width: 750px) {
-	.main-nav ul {
+	.main-nav ul{
 		flex-direction: column;
 		gap: 1.25em;
 	}
@@ -514,6 +515,7 @@ body {
 	.main-nav {
 		border-bottom: 4px solid var(--background-accented);
 	}
+
 	.social-links a {
 		font-size: 1.2em;
 	}
@@ -524,6 +526,9 @@ body {
 		width: 20px;
 		height: 20px;
 	}
+  .social-links span {
+    display: none;
+  }
 	.logo {
 		max-width: 30%;
 	}
