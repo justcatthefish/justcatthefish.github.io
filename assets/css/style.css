@@ -212,7 +212,7 @@ body {
 }
 
 .member-list li{
-  width: 160px;
+  width: 200px;
   min-height: 190px;
   display:block;
 }
@@ -339,6 +339,52 @@ body {
 
 .markdown-content a:visited {
 	color: var(--accent-color);
+}
+
+/* Cube */
+.member-list li:first-child {
+    perspective: 600px;
+    position: relative;
+}
+.cube {
+    display: none;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    transform-style: preserve-3d;
+    transform: rotateX(-30deg) rotateY(-45deg);
+    animation: rotate 5s infinite linear;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.member-list li:first-child:hover .cube {
+    display: block;
+}
+
+.member-list li:first-child:hover a img {
+    opacity: 0;
+}
+
+
+.cube img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.front  { transform: translateZ(50px); }
+.back   { transform: rotateY(180deg) translateZ(50px); }
+.left   { transform: rotateY(-90deg) translateZ(50px); }
+.right  { transform: rotateY(90deg) translateZ(50px); }
+.top    { transform: rotateX(90deg) translateZ(50px); }
+.bottom { transform: rotateX(-90deg) translateZ(50px); }
+
+@keyframes rotate {
+    from { transform: rotateX(-30deg) rotateY(-45deg); }
+    to { transform: rotateX(-30deg) rotateY(315deg); }
 }
 
 /* Responsive */

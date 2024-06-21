@@ -8,7 +8,43 @@
 
 <ul class="member-list">
     {{ range .Site.Data.members.current }}
-      {{ partial "member" . }}
+    <li>
+      {{- if .gravatar }}
+        <a href="{{ .link }}">
+          {{ $avatar := printf "https://gravatar.com/avatar/%s.jpg?s=142" .gravatar }}
+          {{ $image := resources.GetRemote $avatar}}
+          <img class="avatar" src="{{ $image.RelPermalink }}" />
+        </a>
+      {{ else }}
+        {{ $avatar := printf "avatars/%s.png" .name  }}
+        {{ $image := resources.Get $avatar }}
+        {{- if $image }}
+          {{ $image := $image.Process "fit 200x200" }}
+            <a href="{{ .link }}">
+              <img class="avatar" src="{{ $image.RelPermalink }}" />
+            </a>
+          {{ if eq .name "disconnect3d" }}
+            <div class="cube">
+                <img src="{{ $image.RelPermalink }}" class="front">
+                <img src="{{ $image.RelPermalink }}" class="back">
+                <img src="{{ $image.RelPermalink }}" class="left">
+                <img src="{{ $image.RelPermalink }}" class="right">
+                <img src="{{ $image.RelPermalink }}" class="top">
+                <img src="{{ $image.RelPermalink }}" class="bottom">
+            </div>
+          {{ end }}
+        {{ else }}
+          <img class="blank-avatar" src="/blank_avatar.png" alt="No avatar image" />
+        {{end -}}
+      {{end -}}
+      <h4 class="member-name">
+          {{- if .link }}<a href="{{ .link }}"><u>{{ .name }}</u></a>{{ else }}{{ .name }}{{ end -}}
+      </h4>
+      <div class="member-tags">
+          {{- range .tags }}<span class="tag tag-{{ . }}">{{ . }}</span>{{ end -}}
+      </div>
+      <p class="member-desc">{{ .bio | markdownify }}</p>
+    </li>
     {{ end }}
 </ul>
 
