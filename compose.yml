@@ -3,6 +3,7 @@ services:
     image: hugomods/hugo:latest
     volumes:
       - "./:/src/"
+      - "/src/public"
     command: [
       "hugo", "server", "--disableFastRender", "--bind", "0.0.0.0",
     ]
