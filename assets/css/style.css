@@ -347,11 +347,13 @@ body {
     width: 50%;
     height: 50%;
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 36px;
+    left: 24px;
     transform-style: preserve-3d;
-    transform: rotateX(-30deg) rotateY(-45deg);
-    animation: rotate 5s infinite linear;
+    transform: rotateX(-10deg) rotateY(-45deg);
+    animation: scaleAndRotate 5s infinite linear;
+    animation: scaleAndRotate 5s linear 1;
+    animation-fill-mode: forwards;
     transition: opacity 0.5s ease-in-out;
 }
 
@@ -378,9 +380,19 @@ body {
 .top    { transform: rotateX(90deg) translateZ(50px); }
 .bottom { transform: rotateX(-90deg) translateZ(50px); }
 
-@keyframes rotate {
-    from { transform: rotateX(-30deg) rotateY(-45deg); }
-    to { transform: rotateX(-30deg) rotateY(315deg); }
+@keyframes scaleAndRotate {
+    0% {
+        transform: scale(1.25) rotateX(-10deg) rotateY(0deg);
+    }
+    25% {
+        transform: scale(1) rotateX(-30deg) rotateY(0deg);
+    }
+    75% {
+        transform: scale(1) rotateX(-30deg) rotateY(1350deg); /* 945deg = 3 rotations (360*3 + 45) */
+    }
+    100% {
+        transform: scale(1.25) rotateX(-10deg) rotateY(1350deg); /* 1350deg = 3 more rotations (360*3 + 1350) */
+    }
 }
 
 /* Responsive */
