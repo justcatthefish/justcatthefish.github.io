@@ -20,9 +20,13 @@
         {{ $image := resources.Get $avatar }}
         {{- if $image }}
           {{ $image := $image.Process "fit 200x200" }}
+          {{- if .link }}
             <a href="{{ .link }}">
               <img class="avatar" src="{{ $image.RelPermalink }}" />
             </a>
+          {{ else }}
+              <img class="avatar" src="{{ $image.RelPermalink }}" />
+          {{end -}}
           {{ if eq .name "disconnect3d" }}
             <div class="cube">
                 <img src="{{ $image.RelPermalink }}" class="front">
@@ -34,7 +38,13 @@
             </div>
           {{ end }}
         {{ else }}
-          <img class="blank-avatar" src="/blank_avatar.png" alt="No avatar image" />
+          {{- if .link }}
+            <a href="{{ .link }}">
+            <img class="blank-avatar" src="/blank_avatar.png" alt="No avatar image" />
+            </a>
+          {{ else }}
+            <img class="blank-avatar" src="/blank_avatar.png" alt="No avatar image" />
+          {{end -}}
         {{end -}}
       {{end -}}
       <h4 class="member-name">

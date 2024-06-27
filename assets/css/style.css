@@ -355,6 +355,7 @@ body {
     animation: scaleAndRotate 5s linear 1;
     animation-fill-mode: forwards;
     transition: opacity 0.5s ease-in-out;
+    z-index: -1;
 }
 
 .member-list li:first-child:hover .cube {
