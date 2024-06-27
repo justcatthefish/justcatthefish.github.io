@@ -385,10 +385,10 @@ body {
         transform: scale(1.25) rotateX(-10deg) rotateY(0deg);
     }
     25% {
-        transform: scale(1) rotateX(-30deg) rotateY(0deg);
+        transform: scale(1) rotateX(-30deg) rotateY(350deg);
     }
     75% {
-        transform: scale(1) rotateX(-30deg) rotateY(1350deg); /* 945deg = 3 rotations (360*3 + 45) */
+        transform: scale(1) rotateX(-30deg) rotateY(1100deg); /* 945deg = 3 rotations (360*3 + 45) */
     }
     100% {
         transform: scale(1.25) rotateX(-10deg) rotateY(1350deg); /* 1350deg = 3 more rotations (360*3 + 1350) */
