@@ -118,6 +118,9 @@ name = "Tacet"
 
 [[current]]
 name = "terjanq"
+tags = ["web"]
+bio = "Just a random guy playing ctfs."
+link = "https://twitter.com/terjanq"
 
 [[current]]
 name = "Eternal"
