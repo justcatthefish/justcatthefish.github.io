@@ -144,6 +144,12 @@ tags = [ "misc", "fore", "re" ]
 bio = "Juggling with bits and bytes"
 link = "https://foxtrotlabs.cc"
 
+[[current]]
+name = "ksaweryr"
+tags = [ "pwn", "crypto" ]
+bio = "Solving pwn in the most convoluted way possible. Pretending that I know crypto."
+link = "https://github.com/ksaweryr"
+
 # Former
 [[former]]
 name = "ahpaleus"
