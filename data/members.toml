@@ -16,8 +16,13 @@ link = "https://disconnect3d.pl/"
 # mail = dominik.b.czarnota+ctf@gmail.com
 
 [[current]]
+name = "embe221ed"
+tags = [ "pwn", "blockchain" ]
+bio = "team **vice-captain**"
+link = "https://embe221ed.dev"
+
+[[current]]
 name = "haqpl"
-bio = "The team **vice-captain**."
 
 [[current]]
 name = "Arusekk"
@@ -27,12 +32,6 @@ link = "https://blog.arusekk.pl"
 
 [[current]]
 name = "DrBrix"
-
-[[current]]
-name = "embe221ed"
-tags = [ "pwn", "blockchain" ]
-bio = "WUBBA LUBBA DUB DUB!"
-link = "https://embe221ed.dev"
 
 [[current]]
 name = "MrQubo"
